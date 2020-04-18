@@ -4,8 +4,8 @@ import { Post, Category } from '../models';
 import readingTime from 'reading-time';
 
 enum ContentType {
-  POST = 'postMedium',
-  CATEGORY = 'categoryMedium'
+  POST = 'post',
+  CATEGORY = 'category'
 }
 
 export class ContentfulService implements IntegrationService {
