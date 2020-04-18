@@ -1,14 +1,6 @@
-import Head from 'next/head';
-import { Footer } from '../components/footer';
-
 const Home = () => {
   return <>
-    <Head>
-      <title>Next.js Medium Style Blog</title>
-      <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700|Source+Sans+Pro:400,600,700" rel="stylesheet"></link>
-    </Head>
-
-    <div className="container">
+    <div className="container mb-5">
       <div className="jumbotron jumbotron-fluid mb-3 pt-0 pb-0 bg-lightblue position-relative">
         <div className="pl-4 pr-0 h-100 tofront">
           <div className="row justify-content-between">
@@ -25,7 +17,7 @@ const Home = () => {
       </div>
     </div>
 
-    <div className="container pt-4 pb-4">
+    {/* <div className="container pt-4 pb-4">
       <div className="row">
         <div className="col-lg-6">
           <div className="card border-0 mb-4 box-shadow h-xl-300">
@@ -85,11 +77,11 @@ const Home = () => {
           </div>
         </div>
       </div>
-    </div>
+    </div> */}
 
     <div className="container">
       <div className="row justify-content-between">
-        <div className="col-md-8">
+        <div className="col-md-12">
           <h5 className="font-weight-bold spanborder"><span>All Stories</span></h5>
           <div className="mb-3 d-flex justify-content-between">
             <div className="pr-3">
@@ -137,7 +129,7 @@ const Home = () => {
             <img height="120" src="https://images.unsplash.com/photo-1586712447133-1d8836ca525c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" />
           </div>
         </div>
-        <div className="col-md-4 pl-4">
+        {/* <div className="col-md-4 pl-4">
           <h5 className="font-weight-bold spanborder"><span>Popular</span></h5>
           <ol className="list-featured">
             <li>
@@ -181,7 +173,7 @@ const Home = () => {
               </span>
             </li>
           </ol>
-        </div>
+        </div> */}
       </div>
     </div>
   </>

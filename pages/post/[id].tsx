@@ -8,7 +8,7 @@ import { Post as PostModel } from '../../core/models';
 const Post = (post: PostModel) => {
   return <>
     <Head>
-      <title>Next.js Medium Style Blog</title>
+      <title>Franco Salerno</title>
       <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700|Source+Sans+Pro:400,600,700" rel="stylesheet"></link>
     </Head>
 

@@ -9,7 +9,7 @@ export const Nav = ({ categories }: Props) => (
   <nav className="topnav navbar navbar-expand-lg navbar-light bg-white fixed-top">
     <div className="container">
       <Link href="/">
-        <a className="navbar-brand"><strong>Mundana</strong></a>
+        <a className="navbar-brand"><strong>Franco Salerno</strong></a>
       </Link>
       <button className="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
         <span className="navbar-toggler-icon"></span>
@@ -24,11 +24,11 @@ export const Nav = ({ categories }: Props) => (
             </li>;
           })}
         </ul>
-        <ul className="navbar-nav ml-auto d-flex align-items-center">
+        {/* <ul className="navbar-nav ml-auto d-flex align-items-center">
           <li className="nav-item highlight">
             <a className="nav-link" href="https://www.wowthemes.net/mundana-free-html-bootstrap-template/">Get this Theme</a>
           </li>
-        </ul>
+        </ul> */}
       </div>
     </div>
   </nav>

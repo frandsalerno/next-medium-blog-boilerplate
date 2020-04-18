@@ -8,10 +8,6 @@ import { Post } from '../../core/models';
 
 const Category = ({ posts }) => (
   <>
-    <Head>
-      <title>Next.js Medium Style Blog</title>
-    </Head>
-
     <div className="container mt-5 mb-5">
       <div className="row">
         <div className="col-md-8">

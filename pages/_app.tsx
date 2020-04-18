@@ -10,6 +10,7 @@ import { API } from '../core';
 const CustomApp = ({ Component, pageProps, categories }) => {
   return <>
     <Head>
+      <title>Franco Salerno</title>
       <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700|Source+Sans+Pro:400,600,700" rel="stylesheet"></link>
     </Head>
     <Nav categories={categories} />
