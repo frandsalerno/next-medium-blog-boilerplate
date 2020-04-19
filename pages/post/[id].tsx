@@ -3,16 +3,23 @@ import Link from 'next/link';
 import ReactMarkdown from 'react-markdown';
 
 import { API } from '../../core';
+import config from '../../config';
 import { Post as PostModel } from '../../core/models';
+import { NotFound } from '../../components/not-found';
 
-const Post = (post: PostModel) => {
+const Post = ({ post, error }: { post: PostModel, error?: boolean; }) => {
+  if (error) {
+    return <NotFound />;
+  }
+
   return <>
     <Head>
-      <title>Franco Salerno</title>
-      <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700|Source+Sans+Pro:400,600,700" rel="stylesheet"></link>
+      <title>{post.title} - {config.title}</title>
+      <meta property="og:title" content={`${post.title} - ${config.title}`} />
+      <script async src="//static.addtoany.com/menu/page.js"></script>
     </Head>
 
-    <div className="container">
+    <div className="container first-container">
       <div className="jumbotron jumbotron-fluid mb-3 pl-0 pt-0 pb-0 bg-white position-relative">
         <div className="h-100 tofront">
           <div className="row justify-content-between">
@@ -45,14 +52,12 @@ const Post = (post: PostModel) => {
               Share this
             </div>
             <div className="share d-inline-block">
-              {/* <!-- AddToAny BEGIN -->
-              <div className="a2a_kit a2a_kit_size_32 a2a_default_style">
-                <a className="a2a_dd" href="https://www.addtoany.com/share"></a>
-                <a className="a2a_button_facebook"></a>
-                <a className="a2a_button_twitter"></a>
-              </div>
-              <script async src="https://static.addtoany.com/menu/page.js"></script>
-              <!-- AddToAny END --> */}
+              <div className="a2a_kit a2a_kit_size_32 a2a_default_style" dangerouslySetInnerHTML={{__html: `
+                <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+                <a class="a2a_button_facebook"></a>
+                <a class="a2a_button_twitter"></a>
+                <a class="a2a_button_email"></a>
+              `}}></div>
             </div>
           </div>
         </div>
@@ -150,12 +155,12 @@ const Post = (post: PostModel) => {
 
 export const getServerSideProps = async ({ query }) => {
   const apiRef = new API();
-  const post = await apiRef.getPostBySlug(query.id);
-  return {
-    props: {
-      ...post
-    }
-  };
+  try {
+    const post = await apiRef.getPostBySlug(query.id);
+    return { props: { post } };
+  } catch (e) {
+    return { props: { post: null, error: true } }
+  }
 }
 
 export default Post;

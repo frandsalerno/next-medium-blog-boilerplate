@@ -1,12 +1,18 @@
+import Head from 'next/head';
 import Link from 'next/link';
 import ReactMarkdown from 'react-markdown';
 
 import { API } from '../core';
 import { Post } from '../core/models';
+import config from '../config';
 
 const Home = ({ posts }) => {
   return <>
-    <div className="container mb-5">
+    <Head>
+      <title>{config.title}</title>
+    </Head>
+
+    <div className="container first-container">
       <div className="jumbotron jumbotron-fluid mb-3 pt-0 pb-0 bg-lightblue position-relative">
         <div className="pl-4 pr-0 h-100 tofront">
           <div className="row justify-content-between">
