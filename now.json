@@ -1,6 +1,5 @@
 {
   "version": 2,
-  "name": "blog",
   "build": {
     "env": {
       "CONTENTFUL_SPACE_ID": "@contentful_space_id",
