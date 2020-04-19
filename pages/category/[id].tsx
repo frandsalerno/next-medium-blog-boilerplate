@@ -32,7 +32,7 @@ const Category = ({ posts, category, error }: Props) => {
         <div className="col-md-12">
           <h5 className="font-weight-bold spanborder"><span>Featured in {category.name}</span></h5>
           <div className="card border-0 mb-5 box-shadow">
-            <div style={{ backgroundImage: `url(${first.heroImage})`, backgroundSize: 'cover', height: '350px' }}>
+            <div style={{ backgroundImage: `url(${first.heroImage})`, backgroundSize: 'cover', height: '350px', backgroundPosition: 'center center' }}>
             </div>
             <div className="card-body px-0 pb-0 d-flex flex-column align-items-start">
               <h2 className="h2 font-weight-bold">
