@@ -1,4 +1,12 @@
 {
   "name": "Franco Salerno",
-  "title": "Franco Salerno"
+  "title": "Franco Salerno",
+  "domain": "francosalerno.com",
+  "googleTracking": "",
+  "subscription": {
+    "enabled": true,
+    "url": "https://sheetapi.co/apis/8oSEuumQgFaBfkbdNktgtw",
+    "success": "Thank you for signing up. You will be the first to know about new releases",
+    "error": "An error occurred, please try again"
+  }
 }
